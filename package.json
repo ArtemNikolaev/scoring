@@ -1,0 +1,18 @@
+{
+  "name": "the-score-of-the-game",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Easy application, which allows you to count points in the game",
+  "repository": "https://github.com/ArtemNikolaev/scoring",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "start": "http-server -a localhost -p 8000 -c-1 ./app"
+  },
+  "dependencies": {
+    "rollbar-browser": "^1.9.4"
+  }
+}

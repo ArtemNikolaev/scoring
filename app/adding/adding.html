@@ -1,0 +1,23 @@
+<div class="adding">
+    <img class="icon add-count"
+         ng-click="save()"
+         src="img/plus-button.svg"
+         alt="plus-icon">
+
+    <div class="player"
+         ng-style="{background: background($index)}"
+         ng-repeat="(player, counter) in players">
+        <p>
+            <img class="icon minus-one"
+                 ng-click="minus(player)"
+                 src="img/minus-button.svg"
+                 alt="plus-icon">
+            <img class="icon"
+                 ng-click="plus(player)"
+                 src="img/plus-button.svg"
+                 alt="plus-icon">
+            {{player}}<br>
+            <input  type="number" ng-value="counter" ng-model="players[player]">
+        </p>
+    </div>
+</div>
