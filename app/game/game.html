@@ -1,0 +1,13 @@
+<div class="game">
+    <img class="icon add-count"
+         ng-click="addAll()"
+         src="img/plus-button.svg"
+         alt="plus-icon">
+
+    <div class="player"
+         ng-click="addOne($index)"
+         ng-style="{background: background($index)}"
+         ng-repeat="player in players">
+        <p>{{player.name}} <span>{{player.score}}</span></p>
+    </div>
+</div>
