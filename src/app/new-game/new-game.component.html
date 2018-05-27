@@ -1,0 +1,35 @@
+<section id="new-game">
+
+<mat-expansion-panel class="players-from-memory" *ngIf="savedPlayers.length">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Saved Players
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-card>
+        <button
+            *ngFor="let name of savedPlayers; index as index;"
+            mat-raised-button
+            (click)="addFromMemory(index)">
+            {{ name }}
+        </button>
+    </mat-card>
+</mat-expansion-panel>
+
+<mat-card *ngFor="let player of players; index as index;">
+    {{ player }}
+    <mat-icon
+            class="new-game_delete"
+            (click)="delete(index)">
+        delete_forever
+    </mat-icon>
+</mat-card>
+
+<mat-icon
+        class="new-game_add-player"
+        (click)="showModal()">
+    add_circle
+</mat-icon>
+
+</section>
