@@ -32,3 +32,17 @@
 
     font-size: var(--size);
 }
+
+.new-game_start {
+    --size: 25vw;
+    --margin: 6vw;
+
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+
+    left: var(--margin);
+    bottom: var(--margin);
+
+    font-size: var(--size);
+}

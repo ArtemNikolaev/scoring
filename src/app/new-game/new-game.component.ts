@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DialogComponent } from '../dialog/dialog.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-new-game',
@@ -9,7 +11,7 @@ export class NewGameComponent implements OnInit {
   players: string[] = [];
   savedPlayers: string[] = [];
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
       this.savedPlayers = [
@@ -45,7 +47,17 @@ export class NewGameComponent implements OnInit {
       this.players.splice(index, 1);
   }
 
-  showModal() {
-      console.log('add modal');
+  showModal(): void {
+      const dialogRef = this.dialog.open(DialogComponent, {});
+
+      dialogRef.afterClosed().subscribe(result => {
+        if (result && result.length) {
+            this.players.push(result);
+        }
+      });
+  }
+
+  start() {
+      console.log('start');
   }
 }
