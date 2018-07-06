@@ -1,0 +1,32 @@
+<div class="menu-container" [ngClass]="{'show': showLeftMenu}">
+  <ul>
+    <li>
+      <a routerLink="/game" (click)="leftMenu()">
+        <img src="../assets/img/play-round-button.svg" alt="">
+        <span>Current Game</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/new-game" (click)="leftMenu()">
+        <img src="../assets/img/bomb.svg" alt="">
+        <span>New Game</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/players" (click)="leftMenu()">
+        <img src="../assets/img/multiple-users-silhouette.svg" alt="">
+        <span>Players</span>
+      </a>
+    </li>
+    <li>
+      <a href="" (click)="leftMenu()">
+        <img src="../assets/img/repeat.svg" alt="">
+        <span>Clear all</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<img src="../assets/img/menu.svg" alt="" class="menu" [ngClass]="{'show': showLeftMenu}" (click)="leftMenu()">
+
+<router-outlet></router-outlet>

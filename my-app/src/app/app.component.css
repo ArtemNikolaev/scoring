@@ -1,0 +1,45 @@
+.menu {
+    color: white;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 10px;
+    left: 10px;
+    transition: 1s;
+    z-index: 2;
+}
+.menu.show {
+    left: 260px;
+    transition: 1s;
+}
+
+.menu-container {
+    z-index: 2;
+    position:fixed;
+    transition: 1s;
+    top: 0;
+    left: -250px;
+    width:250px;
+    height: 100%;
+    background-color: rgba(44, 44, 44, 0.8);
+}
+.menu-container.show {
+    left: 0;
+    transition: 1s;
+}
+
+.menu-container li {
+    border-bottom: 2px solid rgba(162, 162, 162, 0.32);
+}
+.menu-container a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-container img {
+    width: 20px;
+    height: 20px;
+}
